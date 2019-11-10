@@ -1,6 +1,6 @@
 library(readr)
 -------
-# This script scrapes through organisation-wide Registration data and collects values for each feature of interest
+# This script scrapes through organization-wide Registration data and collects values for each feature of interest
 # User, Mentor and Mentee data sources are then anonymized according to GDPR guidelines
 # All 4 processed data sources are then merged into two data sets (mentorUserDataConsol and menteeUserDataConsol)
 # The output data are then used for dashboarding and analytics
@@ -73,7 +73,7 @@ menteeDataAnon <- menteeData[, -c(2,3,4,6,9,11)]
 menteeDataConsol <- merge(regDataConsol, menteeDataAnon, by = "id", all.y = TRUE)
 menteeUserDataConsol <- merge(menteeDataConsol, userDataAnon, by = "id", all.y = TRUE)
 
-# Output csv file for dashboard
+# Output csv file for dashboard and analysis
 write_excel_csv(mentorUserDataConsol,"mentorUserDataConsol.csv")
 write_excel_csv(menteeUserDataConsol,"menteeUserDataConsol.csv")
 
