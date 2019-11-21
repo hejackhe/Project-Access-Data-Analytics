@@ -1,10 +1,10 @@
 library(readr)
--------
+
 # This script scrapes through organization-wide Registration data and collects values for each feature of interest
 # User, Mentor and Mentee data sources are then anonymized according to GDPR guidelines
 # All 4 processed data sources are then merged into two data sets (mentorUserDataConsol and menteeUserDataConsol)
 # The output data are then used for dashboarding and analytics
--------
+
   
 # Import Registration Data
 regData <- read_csv("Registration_Data.csv")
